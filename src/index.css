@@ -1,0 +1,121 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+ @layer base {
+   :root {
+     /* Luxury Light Theme - Clean, Spacious, Modern */
+     --background: 0 0% 100%;
+     /* Pure White */
+     --foreground: 240 10% 3.9%;
+     /* Almost Black */
+
+     --card: 0 0% 100%;
+     /* White Cards */
+     --card-foreground: 240 10% 3.9%;
+
+     --popover: 0 0% 100%;
+     --popover-foreground: 240 10% 3.9%;
+
+     --primary: 220 15% 20%;
+     /* Dark Slate for Primary Actions */
+     --primary-foreground: 0 0% 98%;
+
+     --secondary: 210 20% 96%;
+     /* Very Light Gray for Secondary BG */
+     --secondary-foreground: 240 5.9% 10%;
+
+     --muted: 240 4.8% 95.9%;
+     --muted-foreground: 240 3.8% 46.1%;
+
+     --accent: 45 60% 50%;
+     /* Soft Gold Accent */
+     --accent-foreground: 240 5.9% 10%;
+
+     --destructive: 0 84.2% 60.2%;
+     --destructive-foreground: 0 0% 98%;
+
+     --border: 240 5.9% 90%;
+     /* Subtle Borders */
+     --input: 240 5.9% 90%;
+     --ring: 240 5.9% 10%;
+
+     --radius: 1rem;
+     /* Soft Rounded Corners */
+   }
+
+   .dark {
+     /* Optional Dark Mode - Keeping it clean if user switches system prefs, but optimizing for Light Mode */
+     --background: 240 10% 3.9%;
+     --foreground: 0 0% 98%;
+
+     --card: 240 10% 3.9%;
+     --card-foreground: 0 0% 98%;
+
+     --popover: 240 10% 3.9%;
+     --popover-foreground: 0 0% 98%;
+
+     --primary: 0 0% 98%;
+     --primary-foreground: 240 5.9% 10%;
+
+     --secondary: 240 3.7% 15.9%;
+     --secondary-foreground: 0 0% 98%;
+
+     --muted: 240 3.7% 15.9%;
+     --muted-foreground: 240 5% 64.9%;
+
+     --accent: 45 60% 50%;
+     --accent-foreground: 0 0% 98%;
+
+     --destructive: 0 62.8% 30.6%;
+     --destructive-foreground: 0 0% 98%;
+
+     --border: 240 3.7% 15.9%;
+     --input: 240 3.7% 15.9%;
+     --ring: 240 4.9% 83.9%;
+   }
+ }
+
+ @layer base {
+   * {
+     @apply border-border;
+   }
+
+   body {
+     @apply bg-background text-foreground font-sans antialiased;
+   }
+
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+     @apply font-display tracking-tight text-primary;
+   }
+ }
+
+ /* Custom scrollbar */
+ ::-webkit-scrollbar {
+   width: 6px;
+ }
+
+ ::-webkit-scrollbar-track {
+   background: hsl(var(--background));
+ }
+
+ ::-webkit-scrollbar-thumb {
+   background: hsl(var(--border));
+   border-radius: 3px;
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+   background: hsl(var(--muted-foreground));
+ }
+
+ /* Canvas container */
+ .ring-canvas-container canvas {
+   outline: none !important;
+ }
