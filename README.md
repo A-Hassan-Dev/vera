@@ -88,5 +88,3 @@ ring-jewel-craft-main/
 5.  Open a Pull Request
 
 ---
-
-*Verified by Vera Rings Dev Team*
